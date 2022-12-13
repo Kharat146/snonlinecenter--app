@@ -1,0 +1,129 @@
+/service:
+  get:
+    description: By this route we can get all Service
+    operationId: GetService 
+    responses:
+      default:
+        description: successful operation
+    security:
+      - bearerAuth: []
+    summary: Get all Service
+    tags:
+      - Service
+  post:
+    description: By this route we can create Service
+    operationId: createService
+    requestBody:
+      content:
+        application/json:
+          schema:
+            description: By this route we can add services.
+            example:
+              name: ""
+              icon: ""
+            type: object
+            properties:
+              name: string
+              icon: string  
+      description: Created Service object
+      required: true
+    responses:
+      default:
+        description: successful operation
+    security:
+      - bearerAuth: []
+    summary: Create Service
+    tags:
+      - Service
+/service/{id}:
+  delete:
+    description: By this route we can delete Service
+    operationId: deleteService
+    parameters:
+      - description: this is use for delete Service by using id
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+          format: uuid
+        style: simple
+    responses:
+      "400":
+        description: Invalid id supplied
+      "404":
+        description: id not found
+    security:
+      - bearerAuth: []
+    summary: Delete Service
+    tags:
+      - Service
+  get:
+    operationId: getServiceById
+    parameters:
+      - description: By this route we can get Service detail using id
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+          format: uuid
+        style: simple
+    responses:
+      "200":
+        content:
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Service"
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Service"
+        description: successful operation
+      "400":
+        description: Invalid Serviceid supplied
+      "404":
+        description: Service not found
+    summary: Get Service by Service id
+    tags:
+      - Service
+    security:
+      - bearerAuth: []
+  put:
+    description: By this route we can update Service
+    operationId: updateService
+    parameters:
+      - description: this is use for update Service by using Serviceid
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+          format: uuid
+        style: simple
+    requestBody:
+      content:
+        application/json:
+          schema:
+            description: By this route we can update services.
+            example:
+              name: ""
+              icon: ""
+            type: object
+            properties:
+              name: string
+              icon: string 
+      description: Updated Service details
+      required: true
+    responses:
+      "400":
+        description: Invalid Service id supplied
+      "404":
+        description: Service not found
+    security:
+      - bearerAuth: []
+    summary: Updated Service
+    tags:
+      - Service    

@@ -1,0 +1,39 @@
+{
+    "development": {
+      "username": "postgres",
+      "password": "tiger",
+      "database": "dbbms",
+      "host": "localhost",
+      "port": "5432",
+      "dialect": "postgres",
+      "seederStorage":  "sequelize",
+      "seederStorageTableName": "sequelize_seeder",
+      "define": {
+        "timestamps": true,
+        "freezeTableName": true
+      },
+      "logging": false
+    },
+    "test": {
+      "username": "postgres",
+      "password": "tiger",
+      "database": "dbbms",
+      "host": "db",
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": "postgres",
+      "password": "tiger",
+      "database": "dbbms",
+      "host": "db",
+      "port": "5432",
+      "dialect": "postgres",
+      "seederStorage":  "sequelize",
+      "seederStorageTableName": "sequelize_seeder",
+      "define": {
+        "timestamps": true,
+        "freezeTableName": true
+      },
+      "logging": false
+    }
+  }

@@ -1,0 +1,23 @@
+APP_CONFIG:
+  PORT: 3008
+  HOST: '0.0.0.0'
+  NODE_ENV: production
+DB_CONFIG:
+  PORT: 3306
+  HOST: 127.0.0.1
+  PASSWORD: password
+  USER: root
+  DB: dbbms
+REDIC_CONFIG:
+  PORT:
+  HOST:
+  PASSWORD:
+  CLUSTER:
+  TIMEOUT:
+  CACHING:
+ELASTIC_CONFIG:
+  HOST:
+  PORT:
+SECRET_KEY: snonlinecenter1234567890
+PASSWORD_ENC_KEY: snonlinecenter023164789
+SELECTED_DB_ENV: postgres

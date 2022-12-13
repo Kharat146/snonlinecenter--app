@@ -1,0 +1,14 @@
+{   
+    "0000" : {
+        "message" : "Something went wrong..." ,
+        "reason" : "Something went wrong..."
+    },
+    "0001":{
+        "message" : "Username and Email is invalid " ,
+        "reason" : "Username and Email is invalid"
+    },
+    "0002":{
+        "message" : "Password is invalid" ,
+        "reason" : "Please provide valid Password"
+    }
+}    

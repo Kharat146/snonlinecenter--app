@@ -1,0 +1,5 @@
+tags:
+  - description: Everything about users
+    name: user
+  - description: This model is for authentication of the user
+    name: auth

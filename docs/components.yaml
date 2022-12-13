@@ -1,0 +1,22 @@
+requestBodies:
+  Login_User:
+    content:
+      application/json:
+        schema:
+          description: A User who can login to our system
+          example:
+            username: username
+            email: email@gmail.com
+            password: password
+          properties:
+            username:
+              type: string
+            mobileNo:
+              type: string  
+            password:
+              type: string
+            email:
+              type: string  
+          title: Login User
+          type: object
+    required: true
